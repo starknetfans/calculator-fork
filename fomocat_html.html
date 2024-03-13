@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>FomoLove / FomoLove Long 收益计算器</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src='/Users/trinity/Desktop/calculator/fomocat_cal.js'/></script>
+
+</head>
+<body>
+
+<div class="container">
+<div>
+<img src="/Users/trinity/Desktop/calculator/fomocat1.jpg">
+</div>
+<br><a href="/"">回首頁</a>/<a href="/fomo3d.html">繁體中文</a>/<a href="/fomo3dcn.html">简体中文</a>/<a href="/fomo3den.html">English</a><br>
+FomoLove / FomoLove Long 收益计算器：<br><br>
+<form>
+  <div class="form-group row">
+    <label for="ethpec" class="col-sm-6 col-form-label">请输入您已投资的SUI数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">      
+        <input type="number" class="form-control" id="ethpec" value="0.00526217" min="0">
+		<div class="input-group-append">
+			<span class="input-group-text">SUI</span>
+		</div>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="keypec" class="col-sm-6 col-form-label">请输入您持有的KEY数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">      
+        <input type="number" class="form-control" id="keypec" value="1" min="0">
+		<div class="input-group-append">
+			<span class="input-group-text">KEY</span>
+		</div>
+      </div>	
+    </div>
+  </div>
+   
+  <div class="form-group row">
+    <label for="totalkeypec" class="col-sm-6 col-form-label">请输入全网持有的KEY数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">      
+        <input type="number" class="form-control" id="totalkeypec" value="33197859" min="0">
+		<div class="input-group-append">
+			<span class="input-group-text">KEY</span>
+		</div>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="getethpec" class="col-sm-6 col-form-label">请输入您已获得的SUI数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">      
+        <input type="number" class="form-control" id="getethpec" value="0" min="0">
+		<div class="input-group-append">
+			<span class="input-group-text">SUI</span>
+		</div>
+      </div>	
+    </div>
+  </div>
+  
+  <div>
+	<button type="button" class="btn btn-primary" onclick="fomo3d()"><i class="fas fa-calculator"></i>开始计算</button>
+  </div>
+
+  <div class="form-group row">
+    <label for="endkey" class="col-sm-6 col-form-label">预计回本的KEY总量数字：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="endkey"></output>KEY<br>
+      </div>	
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="buykey" class="col-sm-6 col-form-label">还需要有韭菜购买KEY的数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="buykey"></output>KEY<br>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="buyeth" class="col-sm-6 col-form-label">还需要割的韭菜数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="buyeth"></output>SUI<br>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="noweth" class="col-sm-6 col-form-label">目前已割韭菜数量：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="noweth"></output>SUI<br>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="endkeyprice" class="col-sm-6 col-form-label">预计回本一把KEY的价格：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="endkeyprice"></output>SUI<br>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="nowkeyprice" class="col-sm-6 col-form-label">目前一把KEY的价格：</label>
+    <div class="col-sm-4 row">
+	  <div class="input-group">
+	  	<output id="nowkeyprice"></output>SUI<br>
+      </div>	
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="Fomo3D" class="col-sm-5 col-form-label">我的FomoLove推荐链接：<br>
+	我的FomoLove推荐链接：<br>
+	我的赞助地址：</label>
+    <div class="col-sm-7 row">
+	  <div class="input-group">
+	  	<a href="https://fomolove.io/2048" target="_blank">https://fomolove.io/2048</a>
+      </div>
+	  <div class="input-group">
+		<a href="https://fomolove.io/2048" target="_blank">https://fomolove.io/2048</a>
+      </div>	
+	  <div class="input-group">
+		0x
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="Fomo Short" class="col-sm-7 col-form-label">制作者：FomoCat</label>
+  </div>
+
+</form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41376308-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
